@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int quantidadeNumeros = 5;
+        int maiorNumero = Integer.MIN_VALUE;
+
+        System.out.println("Digite " + quantidadeNumeros + " números:");
+
+        
+        for (int i = 0; i < quantidadeNumeros; i++) {
+            System.out.print("Número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+
+            
+            if (numero > maiorNumero) {
+                maiorNumero = numero;
+            }
+        }
+
+        System.out.println("O maior número é: " + maiorNumero);
+
+        scanner.close();
