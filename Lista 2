@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class VerificadorSenha {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
+            // Pedir o nome de usuário
+            System.out.print("Digite o nome de usuário: ");
+            String usuario = scanner.nextLine();
+            
+            // Pedir a senha
+            System.out.print("Digite a senha: ");
+            String senha = scanner.nextLine();
+            
+            // Verificar se a senha é igual ao nome de usuário
+            if (senha.equals(usuario)) {
+                System.out.println("Erro: A senha não pode ser igual ao nome de usuário.");
+                System.out.println("Por favor, tente novamente.\n");
+            } else {
+                System.out.println("Cadastro realizado com sucesso!");
+                break; // Sair do loop
+            }
+        }
+        
+        scanner.close();
+    }
+}
